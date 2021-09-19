@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+</head>
+<body>
+    <body>
+        {% include 'navbar.html' %}
+
+        <style>
+          body {
+  background-color: #C1E1C1;
+
+  }
+
+  .h5{
+    background-color: lightgrey;
+  }
+
+          
+        </style>
+    
+    <div class="container">
+        <table 
+        id="table"
+        data-toggle="table"
+        data-filter-control="true"
+        data-show-search-clear-button="true"
+        >
+                    <thead class="thead-dark"> 
+                        <tr id='tableHeader'>
+                        <th  data-field="Farmer Name" class="h5" data-sortable="true" data-filter-control="input"> Name of Farmer </button> </th>
+                        <th  data-field="Product Name" class="h5" data-sortable="true" data-filter-control="input"> Product Name </button> </th>
+                        <th  data-field="Price" class="h5" data-sortable="true" data-filter-control="input">  Price </button> </th>
+                        <th  data-field="Address" class="h5" data-sortable="true" data-filter-control="input"> Address  </button> </th>
+                        <th class="h5" data-sortable="true" data-filter-control="input"> Check Out  </button> </th>
+
+                        </tr>
+    
+                    </thead> 
+          <tbody>
+                    <!---Table goes here-->
+                    {% for p in product_list%}
+    
+                    <tr>
+                    <td>{{p.farmer_name}}</td>
+                    <td>{{p.product_name}}</td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.address}}</td>
+                    <td><a href="{% url 'wthapp:payment' %}"><Button class = "btn btn-primary">Buy Now</Button></a></td>
+                    </tr>
+                      {% endfor %}
+                    </tbody>
+        </table>
+      </div>
+        <script>
+      $(function() {
+        $('#table').bootstrapTable()
+      })
+    </script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+      </body>
+</body>
+</html>
+
+
