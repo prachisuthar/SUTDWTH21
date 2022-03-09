@@ -7,4 +7,4 @@ Ho Rui En<br/>
 Qawiyyul Ameen<br/> 
 Bryan Chew.<br/> 
 <br/> 
-More at: https://devpost.com/software/cattlepotty?ref_content=my-projects-tab&ref_feature=my_projects
+To view project details: https://devpost.com/software/cattlepotty?ref_content=my-projects-tab&ref_feature=my_projects
