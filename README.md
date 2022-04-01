@@ -1,5 +1,5 @@
 # SUTDWTH21
-Done in collaboration and with patient guidance from Prachi Suthar from SUTD.<br />
+Under patient guidance from Prachi Suthar from SUTD.<br />
 
 <br/> 
 Other teammates who worked on hardware:<br/> 
