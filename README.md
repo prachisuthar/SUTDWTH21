@@ -1,5 +1,5 @@
 # SUTDWTH21
-Under patient guidance from Prachi Suthar from SUTD.<br />
+Webstie to connect farmers to consumers directly. <br />
 
 <br/> 
 Other teammates who worked on hardware:<br/> 
